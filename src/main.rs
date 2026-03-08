@@ -12,9 +12,9 @@ async fn main() -> Result<()> {
     // Load all parquet files in the data folder
     ctx.register_parquet("taxi", "data", ParquetReadOptions::default()).await?;
 
-    // =====================================================
+  
     // Aggregation 1 — DataFrame API
-    // =====================================================
+ 
 
     println!("=== 1. Trips & Revenue by Month - DataFrame API ===");
 
@@ -30,9 +30,9 @@ async fn main() -> Result<()> {
 
     df.show().await?;
 
-    // =====================================================
+
     // Aggregation 1 — SQL
-    // =====================================================
+   
 
     println!("\n=== 1. Trips & Revenue by Month - SQL ===");
 
@@ -49,9 +49,9 @@ async fn main() -> Result<()> {
     .show()
     .await?;
 
-    // =====================================================
+ 
     // Aggregation 2 — DataFrame API
-    // =====================================================
+  
 
     println!("\n=== 2. Tip Behavior by Payment Type - DataFrame API ===");
 
@@ -67,9 +67,8 @@ async fn main() -> Result<()> {
 
     df2.show().await?;
 
-    // =====================================================
     // Aggregation 2 — SQL
-    // =====================================================
+  
 
     println!("\n=== 2. Tip Behavior by Payment Type - SQL ===");
 
