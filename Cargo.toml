@@ -1,0 +1,10 @@
+[package]
+name = "nyc_taxi_datafusion"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+datafusion = "36"
+tokio = { version = "1", features = ["full"] }
+anyhow = "1"
+chrono = "=0.4.38"
